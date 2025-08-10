@@ -1,0 +1,90 @@
+/* AuthForm.css */
+
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #121826, #2c3e50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-box {
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 35px 30px; /* زيادة المسافة الداخلية */
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.auth-box h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.auth-box input {
+  width: 90%;
+  padding: 14px;
+  margin-bottom: 18px; /* مسافة أكبر بين العناصر */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.auth-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.auth-box input:focus {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-color: #00ffc8;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 255, 200, 0.4);
+}
+
+.auth-error {
+  font-size: 12px;
+  color: #ff4d4d;
+  margin: -10px 0 10px; /* يقرب الرسالة من الـ input */
+  text-align: left;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #00ffc8, #00d4ff);
+  color: #121826;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 5px;
+}
+
+.auth-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 255, 200, 0.4);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
